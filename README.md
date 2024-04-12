@@ -4,8 +4,8 @@
 ______________________________________
 ### Configuración con MATLAB
 - Siguiendo las instrucciones del laboratorio se instala ROS en una máquina virtual con sistema operativo Ubuntu 20.04 LTS y se descarga matlab en la misma. Con esto se abren dos terminales usando los comandos, estos comandos permiten inicializar el simulador de turtle
-[Image](https://github.com/garoperob/lab3robotics/blob/main/imagenes/rosinit.png)
-[Image](https://github.com/garoperob/lab3robotics/blob/main/imagenes/turtleUp.png) 
+![Image](https://github.com/garoperob/lab3robotics/blob/main/imagenes/rosinit.png)
+![Image](https://github.com/garoperob/lab3robotics/blob/main/imagenes/turtleUp.png) 
 ```MATLAB
 %%
 rosinit
