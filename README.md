@@ -34,9 +34,9 @@ posMsg.AngularVelocity=1.2;
 send(posPub,posMsg) 
 pause(1)
 ```
-```Python
-### Configuraci[on con Python
 
+### Configuraci[on con Python
+```Python
 #!/usr/bin/env python
 
 import rospy
