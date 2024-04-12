@@ -42,6 +42,7 @@ pause(1)
 Finalmente, la forma en que se apaga la consola global es usando el comando rosshutdown
 ![Image](https://github.com/garoperob/lab3robotics/blob/main/imagenes/Screenshot%20from%202024-04-12%2015-35-22.png)
 ### Configuración con Python
+La última parte del laboratorio requiere manipular de forma dinámica el simulador turtle mediante un archivo .py. Esto se hace aplicando las librerías mostradas en el laboratorio
 ```Python
 #!/usr/bin/env python
 
@@ -50,7 +51,9 @@ from geometry_msgs.msg import Twist
 from turtlesim.srv import TeleportAbsolute, TeleportRelative
 import termios, sys, os
 from numpy import pi
-
+```
+Por consiguiente se usa el código del blog compartido para la lectura de teclado
+```Python
 def getkey():
     fd = sys.stdin.fileno()
     old = termios.tcgetattr(fd)
@@ -65,7 +68,9 @@ def getkey():
     finally:
         termios.tcsetattr(fd, termios.TCSAFLUSH, old)
     return key
-
+```
+Finalmente, se construye la función de movimiento que incluye, el desplazamiento mediante las teclas W y S, y la rotación en sentido antihorario y horario con las teclas A y D, respectivamente. Cada una de losmovmientos están basados en las propiedades de la función Twist() que permite modificar las parámetros de avance en x y rotación alrededor de z. El avance se eligió de 1 unidad y la rotación de pi/4 se en un sentido o en el otro.
+```Python
 def move():
     rospy.init_node('my_turtle', anonymous=True)
     vel_pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
@@ -115,6 +120,7 @@ if __name__ == '__main__':
         pass
 
 ```
-
+![Image](https://github.com/garoperob/lab3robotics/blob/main/imagenes/myTeleopKey.png)
+![Image](https://github.com/garoperob/lab3robotics/blob/main/imagenes/pythonTurtle.png)
 
 
