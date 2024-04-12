@@ -3,7 +3,7 @@
 ### Joan Sebasti[an Arcila Cardozo
 ______________________________________
 ### Configuraci[on con MATLAB
-'''
+```MATLAB
 %%
 rosinit
 %%
@@ -14,7 +14,8 @@ velMsg.Linear.X = 2;
 velMsg.Linear.Y = 2;
 send(velPub, velMsg);
 pause(1)
-'''
+```
+```MATLAB
 %%
 rosinit
 %%
@@ -32,9 +33,10 @@ posMsg.LinearVelocity=3;
 posMsg.AngularVelocity=1.2;
 send(posPub,posMsg) 
 pause(1)
-'''
+```
+```Python
 ### Configuraci[on con Python
-'''
+
 #!/usr/bin/env python
 
 import rospy
@@ -58,7 +60,7 @@ def getkey():
         termios.tcsetattr(fd, termios.TCSAFLUSH, old)
     return key
 
-def rotate():
+def move():
     rospy.init_node('my_turtle', anonymous=True)
     vel_pub = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
     vel_msg = Twist()
@@ -102,11 +104,11 @@ def rotate():
 
 if __name__ == '__main__':
     try:
-        rotate()
+        move()
     except rospy.ROSInterruptException:
         pass
 
-'''Python
+```
 
 
 
