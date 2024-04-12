@@ -22,8 +22,8 @@ pause(1)
 %%
 rosinit
 %%
-posPub = rospublisher('/turtle1/pose','turtlesim/Pose'); 
-posMsg = rosmessage(posPub)
+posSub = rossubscriber('/turtle1/pose','turtlesim/Pose')
+posMsg = rosmessage(posSub)
 %%
 %
 %
@@ -34,7 +34,6 @@ posMsg.Y = 1;
 posMsg.Theta=2.304;
 posMsg.LinearVelocity=3;
 posMsg.AngularVelocity=1.2;
-send(posPub,posMsg) 
 pause(1)
 ```
 
