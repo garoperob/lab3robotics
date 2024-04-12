@@ -18,6 +18,7 @@ velMsg.Linear.Y = 2;
 send(velPub, velMsg);
 pause(1)
 ```
+El siguiente ejercicio es crear un script para suscribirse a la pose mediante la función rossubscriber(), mediante el siguiente código. Adicionalmente, se envían todos los valores usando los atritbutos de la función rosmessage()
 ```MATLAB
 %%
 rosinit
@@ -36,7 +37,10 @@ posMsg.LinearVelocity=3;
 posMsg.AngularVelocity=1.2;
 pause(1)
 ```
+![Image](https://github.com/garoperob/lab3robotics/blob/main/imagenes/resultsROSpublisher.png)
 
+Finalmente, la forma en que se apaga la consola global es usando el comando rosshutdown
+![Image](https://github.com/garoperob/lab3robotics/blob/main/imagenes/Screenshot%20from%202024-04-12%2015-35-22.png)
 ### Configuración con Python
 ```Python
 #!/usr/bin/env python
