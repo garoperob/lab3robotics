@@ -1,8 +1,11 @@
-# Laboratorio 3 Introducci[on a ROS
+# Laboratorio 3 Introducción a ROS
 ### Gustavo Adolfo Ropero Bastidas
-### Joan Sebasti[an Arcila Cardozo
+### Joan Sebastián Arcila Cardozo
 ______________________________________
-### Configuraci[on con MATLAB
+### Configuración con MATLAB
+- Siguiendo las instrucciones del laboratorio se instala ROS en una máquina virtual con sistema operativo Ubuntu 20.04 LTS y se descarga matlab en la misma. Con esto se abren dos terminales usando los comandos, estos comandos permiten inicializar el simulador de turtle
+[Image](imagenes/rosinit)
+[Image](imagenes/turtleUp) 
 ```MATLAB
 %%
 rosinit
@@ -35,7 +38,7 @@ send(posPub,posMsg)
 pause(1)
 ```
 
-### Configuraci[on con Python
+### Configuración con Python
 ```Python
 #!/usr/bin/env python
 
