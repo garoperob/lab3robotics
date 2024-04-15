@@ -120,7 +120,7 @@ if __name__ == '__main__':
         pass
 
 ```
-![Image](https://github.com/garoperob/lab3robotics/blob/main/imagenes/myTeleopKey.png)
+![Image](https://github.com/garoperob/lab3robotics/blob/main/imagenes/catkin_pkg.png)
 ![Image](https://github.com/garoperob/lab3robotics/blob/main/imagenes/pythonTurtle.png)
 
 
