@@ -69,7 +69,7 @@ def getkey():
         termios.tcsetattr(fd, termios.TCSAFLUSH, old)
     return key
 ```
-Finalmente, se construye la función de movimiento que incluye, el desplazamiento mediante las teclas W y S, y la rotación en sentido antihorario y horario con las teclas A y D, respectivamente. Cada una de losmovmientos están basados en las propiedades de la función Twist() que permite modificar las parámetros de avance en x y rotación alrededor de z. El avance se eligió de 1 unidad y la rotación de pi/4 se en un sentido o en el otro.
+Finalmente, se construye la función de movimiento que incluye, el desplazamiento mediante las teclas W y S, y la rotación en sentido antihorario y horario con las teclas A y D, respectivamente. Cada una de los movimientos están basados en las propiedades de la función Twist() que permite modificar las parámetros de avance en x y rotación alrededor de z. El avance se eligió de 1 unidad y la rotación de pi/4 se en un sentido o en el otro. Además, la barra espaciadora teletransporta al punto de origen trasladado 5.5 tanto en x como en y, r permite rotación de 180° y q finaliza la ejecución del script.
 ```Python
 def move():
     rospy.init_node('my_turtle', anonymous=True)
@@ -122,5 +122,9 @@ if __name__ == '__main__':
 ```
 ![Image](https://github.com/garoperob/lab3robotics/blob/main/imagenes/catkin_pkg.png)
 ![Image](https://github.com/garoperob/lab3robotics/blob/main/imagenes/pythonTurtle.png)
-
-
+## Análisis
+Mediante el tópico '/turtle1/cmd_vel' se puede modificar la velocidad de la tortuga, usando el mensaje Twist. Esto permite cambiar elvalor de las propiedades que como los son avance linear, rotación angular. Por otra parte, en MATLAB se puede modificar la pose con el tópico '/turtle1/pose' que altera la posición en ambos ejes, ángulo, velocidad linear y angular, pero no altera la posición de la tortuga.
+## Conclusiones
+- La creación de un workspace usando la librería catkin no fue clara. Sin embargo, mediante investigación se pudo crear el paquete hello_turtle requerido y conectarlo al archivo .py.
+- La implementación del laboratorio se pudo llevar a cabo sin problema en Oracle VM. No obstante, se evidencia que carece de capacidad para mayores proyectos.
+- El uso de ROS se puede llevar a cabo mediante terminales de Linux como ejecuatando MATLAB, permitiendo el último una ventaja al ser más fácil de usar.
